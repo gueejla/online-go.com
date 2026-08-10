@@ -264,6 +264,10 @@ export function PlayControls({ annulment_reason }: PlayControlsProps): React.Rea
             console.error(e);
         }
 
+        // TODO: need to know if playing computer or player here
+        // Likely have to set it in goban.engine configs when that is instantiated?
+        // Not sure where that is as of now...
+
         challengeRematch(
             goban,
             data.get("user").id === goban.engine.players.black.id
